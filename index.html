@@ -1,0 +1,62 @@
+{
+  "component": "InteractiveDashboard",
+  "title": "Análise de Impacto do Celular no Ambiente Escolar",
+  "filters": [
+    {
+      "id": "status_celular",
+      "label": "Trazer Celular para a Escola",
+      "type": "select",
+      "options": [
+        {"label": "Todos os Alunos", "value": "todos"},
+        {"label": "Levam (Sim / Condicional)", "value": "sim"},
+        {"label": "Não Levam (Não)", "value": "nao"}
+      ],
+      "defaultValue": "todos"
+    },
+    {
+      "id": "busca_explicao",
+      "label": "Filtrar por Explicação / Motivo",
+      "type": "text",
+      "placeholder": "Ex: lanterna, pais, proibido, contraturno..."
+    }
+  ],
+  "layout": "side-by-side",
+  "charts": [
+    {
+      "type": "pie",
+      "title": "Distribuição de Horas Diárias no Celular (Por Aluno)",
+      "data": [
+        {"label": "5 horas", "value": 9},
+        {"label": "2 horas", "value": 2},
+        {"label": "4 horas", "value": 2},
+        {"label": "7 horas", "value": 2},
+        {"label": "Quase o dia todo", "value": 1},
+        {"label": "8 horas", "value": 1},
+        {"label": "6 horas", "value": 1},
+        {"label": "5 a 7 horas", "value": 1},
+        {"label": "3 horas", "value": 1},
+        {"label": "2h30", "value": 1},
+        {"label": "1 ou 2 horas", "value": 1},
+        {"label": "Só pra ver hora", "value": 1}
+      ]
+    },
+    {
+      "type": "bar",
+      "title": "Frequência de Retenção e Motivações na Escola",
+      "orientation": "horizontal",
+      "sorting": "descending",
+      "xAxisLabel": "Quantidade de Alunos",
+      "yAxisLabel": "Status e Justificativa",
+      "data": [
+        {"label": "Não (Sem justificativa extra)", "value": 10},
+        {"label": "Sim (Para falar com os pais)", "value": 2},
+        {"label": "Sim (Precisa da lanterna para voltar)", "value": 2},
+        {"label": "Não (Pois não precisa)", "value": 2},
+        {"label": "Não (Porque é proibido / tem detector)", "value": 2},
+        {"label": "Não (Pois os pais não deixam)", "value": 1},
+        {"label": "Sim (Só se não for direto para casa / avisar pais)", "value": 1},
+        {"label": "Sim (Só quando tem contraturno)", "value": 1}
+      ]
+    }
+  ]
+}
